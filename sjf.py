@@ -5,6 +5,7 @@ for i in range(no_of_proc):
     proc.append(list(map(int,input().split(" "))))
     proc.sort()
 
+print(proc)
 for i in range(len(proc)):
     current_arr_time = proc[i][1]
     index = i
@@ -13,6 +14,7 @@ for i in range(len(proc)):
             current_arr_time = proc[j][1]
             index = j
     proc[i][1] , proc[index][1] = proc[index][1] , proc[i][1] 
+    proc[i][0] , proc[index][0] = proc[index][0] , proc[i][0] 
 
 print("Your proc are sorted according to burst time here is new arrival time and burst time list : ")
 print("Arrival-Time \t Burst-Time")
